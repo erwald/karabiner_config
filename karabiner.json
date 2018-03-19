@@ -6,9 +6,43 @@
     },
     "profiles": [
         {
+            "complex_modifications": {
+                "parameters": {
+                    "basic.to_if_alone_timeout_milliseconds": 200
+                },
+                "rules": [
+                    {
+                        "description": "Change spacebar to left_shift. (Post spacebar if pressed alone)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
             "devices": [
                 {
                     "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": {},
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": false,
@@ -16,7 +50,25 @@
                         "vendor_id": 1452
                     },
                     "ignore": false,
-                    "keyboard_type": 0
+                    "keyboard_type": 0,
+                    "simple_modifications": {}
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": {},
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 1957,
+                        "vendor_id": 1118
+                    },
+                    "ignore": false,
+                    "simple_modifications": {
+                        "grave_accent_and_tilde": "non_us_backslash",
+                        "left_command": "left_option",
+                        "left_option": "left_command",
+                        "non_us_backslash": "grave_accent_and_tilde"
+                    }
                 }
             ],
             "fn_function_keys": {
@@ -34,15 +86,10 @@
                 "f9": "vk_consumer_next"
             },
             "name": "Default profile",
+            "one_to_many_mappings": {},
             "selected": true,
             "simple_modifications": {
-                "caps_lock": "left_shift",
-                "spacebar": "left_shift",
-                "left_option": "left_command",
-                "left_command": "left_option"
-            },
-            "standalone_keys": {
-                "spacebar": "spacebar"
+                "caps_lock": "left_shift"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
@@ -52,3 +99,4 @@
         }
     ]
 }
+
