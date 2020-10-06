@@ -16,7 +16,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Change spacebar to left_shift. (Post spacebar if pressed alone)",
+                        "description": "Change spacebar to left_shift, to spacebar if pressed alone.",
                         "manipulators": [
                             {
                                 "from": {
@@ -42,7 +42,7 @@
                         ]
                     },
                     {
-                        "description": "Change enter to control if pressed with other keys",
+                        "description": "Change enter to control if pressed with other keys.",
                         "manipulators": [
                             {
                                 "from": {
@@ -94,7 +94,7 @@
                         ]
                     },
                     {
-                        "description": "Change non_us_backslash (§) to option+shift. (Post § if pressed alone.)",
+                        "description": "Change non_us_backslash (§) to option+shift, to § if pressed alone.",
                         "manipulators": [
                             {
                                 "from": {
